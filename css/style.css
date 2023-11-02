@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap');
+
+* {
+    margin: 0;
+
+    /* border-style: solid;
+    border-width: 1px;
+    border-color: red; */
+  }
+  
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+
+    font-size: 16px;
+    font-family: var(--ffopensans);
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+
+:root{
+    --very-dark-blue: hsl(243, 87%, 12%);
+    --desaturated-blue: hsl(238, 22%, 44%);
+
+    --bright-blue: hsl(224, 93%, 58%);
+    --moderate-cyan: hsl(170, 45%, 43%);
+
+    --light-grayish-blue: hsl(240, 75%, 98%);
+    --light-gray: hsl(0, 0%, 75%);
+
+    --ffopensans: 'Open Sans', sans-serif;
+    --ffraleway: 'Raleway', sans-serif;
+
+    --fw400: 400;
+    --fw700: 700;
+
+    --padding2body: 3rem;
+}
+/************************************************************/
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--padding2body);
+}
+nav{
+    display: flex;
+    gap: 2rem;
+}
+a{
+    text-decoration: none;
+    width: max-content;
+}
+header a{
+    place-items: center;
+}
+section{
+    padding: var(--padding2body);
+    display: grid;
+}
+/************************************************************/
+#first-section{
+    grid-template-columns: 50% 50%;
+}
+h1{
+    font-family: var(--ffraleway);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+p{
+    margin-bottom: 1rem;
+}
+input{
+    padding: 0.8rem;
+}
+#first-input{
+    width: 55%;
+}
+button{
+    padding: 0.8rem;
+
+    background-color: var(--bright-blue);
+    border-style: solid;
+    border-color: var(--bright-blue);
+    border-radius: 0.2rem;
+    color: white;
+    font-family: var(--ffraleway);
+    font-weight: var(--fw700);
+    cursor: pointer;
+}
+#first-btn{
+    width: 30%;
+    margin-left: 0.5rem;
+}
+.illustration-mobile{
+    display: none;
+}
+/************************************************************/
+#second-section{
+    display: grid;
+    grid-template-columns: 55% 45%;
+}
+#second-section .info{
+    width: 70%;
+}
+#second-section a{
+    color: var(--moderate-cyan);
+    border-bottom-style: solid;
+    border-width: 1px; 
+}
+#second-section a img{
+    display: inline;
+}
+#profile-card{
+    box-shadow: 0px 0px 10px var(--light-gray);
+    padding: 2rem;
+    width: 400px;
+    margin-block: 3rem;
+}
+#profile-card #feedback{
+    width: 85%;
+}
+#profile{
+    display: flex;
+}
+#profile img{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 100%;
+}
+#profileName p{
+    margin: 0;
+    margin-left: 0.5rem;
+}
+#profileName #name{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+#profileName #companyPosition{
+    font-size: 0.8rem;
+}
+/************************************************************/
+#third-section{
+    background-color: var(--desaturated-blue);
+    color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding-block: 5rem;
+}
+#third-section #info{
+    padding-right: 12rem;
+}
+#inputBtn-group{
+    padding: 1rem;
+    padding-left: 9rem;
+}
+#third-section #inputBtn-group input{
+    width: 70%;
+    display: block;
+    margin: 0.5rem;
+}
+#third-section #inputBtn-group button{
+    width: 35%;
+    display: block;
+    margin: 0.5rem;
+}
+/************************************************************/
+footer{
+    background-color: var(--very-dark-blue);
+    color: var(--light-gray);
+    padding: var(--padding2body);
+    padding-block: 5rem;
+}
+footer img{
+    display: inline;
+}
+footer #logo-footer{
+    margin-bottom: 1rem;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(0deg);
+}
+#info-footer{
+    display: grid;
+    grid-template-columns: 40% 20% 20% 20%;
+}
+footer a {
+    color: var(--light-gray);
+}
+footer .links{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+footer #info-footer #socials i{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 100%;
+    padding: 0.5rem;
+}
+/************************************************************/
+.tag p{
+    background-color: var(--very-dark-blue);
+    margin: 0;
+    color: white;
+}
+/************************************************************/
+header a:hover{
+    opacity: 90%;
+    text-decoration: underline;
+}
+button:hover{
+    opacity: 90%;
+}
+#second-section a:hover{
+    opacity: 80%;
+}
+footer a:hover{
+    opacity: 90%;
+    color: var(--desaturated-blue);
+}
+footer #info-footer #socials i:hover{
+    color: var(--bright-blue);
+}
+/************************************************************/
+@media (max-width: 1294px) {
+    #third-section{
+        grid-template-columns: 40% 60%;
+    }
+    #third-section #info{
+        padding-right: 4rem;
+    }
+}
+@media (max-width: 1094px) {
+    #third-section{
+        display: block;
+        text-align: center;
+    }
+    #third-section #info{
+        padding: 0;
+    }
+    #inputBtn-group{
+        padding: 0;
+        text-align: center;
+    }
+    #third-section #inputBtn-group input{
+        display: inline;
+        margin: 0;
+        margin-bottom: 0.5rem;
+        width: 70%;
+    }
+    #third-section #inputBtn-group button{
+        display: inline;
+        margin: 0;
+        width: 70%;
+    }
+}
+@media (max-width: 912px) {
+    #first-section{
+        display: block;
+        text-align: center;
+    }
+    #second-section{
+        display: block;
+        text-align: center;
+    }
+    #first-section{
+        display: block;
+    }
+    #first-section #first-input{
+        display: inline;
+        margin-bottom: 0.5rem;
+        width: 70%;
+    }
+    #first-section #first-btn{
+        display: inline;
+        width: 70%;
+    }
+    .illustration-mobile{
+        display: block;
+    }
+    .illustration-desktop{
+        display: none;
+    }
+    #second-section .info{
+        width: 100%;
+    }
+    #profile-card{
+        margin: 3rem auto;
+    }
+    #profile-card #feedback{
+        text-align: left;
+    }
+}
+@media (max-width: 722px) {
+    h1{
+        font-size: 1.9rem;
+    }
+}
+@media (max-width: 670px) {
+    #info-footer{
+        display: block;
+    }
+    .links{
+        margin-block: 2rem;
+    }
+    #socials{
+        margin-top: 0.5rem;
+        text-align: center;
+    }
+    #profile-card{
+        width: 80%;
+    }
+}
+@media (max-width: 510px) {
+    header{
+        padding: 1rem;
+    }
+    header img{
+        width: 40%;
+    }
+    header a{
+        font-size: 0.8rem;
+    }
+    header nav{
+        gap: 0.8rem;
+    }
+    #first-section{
+        padding-inline: 1rem;
+    }
+    #second-section{
+        padding-inline: 1rem;
+    }
+}
